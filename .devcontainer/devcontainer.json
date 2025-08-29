@@ -1,0 +1,22 @@
+{
+  "name": "Comp Bio Assignment",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "R -q -e 'install.packages(c(\"tidyverse\",\"readr\",\"here\",\"jsonlite\"), repos=\"https://cloud.r-project.org\")'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r",
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
