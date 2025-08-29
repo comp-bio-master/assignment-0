@@ -2,7 +2,7 @@
 
 ## Reading for Discussion Next lecture
 
-[Wickham 2014 Tidy Data.pdf](../literature/Wickham_2014_Tidy_Data.pdf)
+[Wickham 2014 Tidy Data.pdf](https://github.com/tamucc-comp-bio/classroom_repo_2025/tree/main/literature)
 
 ---
 
@@ -48,7 +48,7 @@ Your account will probably not be activated in time, so you should immediately c
 
 ## Download Data for Assignment (Do Not Follow The Download Instructions on Software Carpentry)
 
-You will need to **download the data file for the lesson**.  Copy and paste the following code block into your terminal. _If you are having trouble copying and pasting in Ubuntu on windows, make sure that you are using the [Windows Terminal App](https://docs.microsoft.com/en-us/windows/terminal/install) to run Ubuntu.  You were asked to install the terminal app in the [Week 00 Lecture In Class Exercises](../lectures/lecture00.md). With Windows Terminal, copying and pasting should work as you're accustomed to.  For those with Macs, there should be no issues with copying and pasting._
+You will need to **download the data file for the lesson**.  Copy and paste the following code block into your terminal. _If you are having trouble copying and pasting in Ubuntu on windows, make sure that you are using the [Windows Terminal App](https://docs.microsoft.com/en-us/windows/terminal/install) to run Ubuntu.  You were asked to install the terminal app in the [Week 00 Lecture In Class Exercises](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/lectures/lecture00.md). With Windows Terminal, copying and pasting should work as you're accustomed to.  For those with Macs, there should be no issues with copying and pasting._
 
 If you are using GitHub CodeSpaces, then run this.  If you are not, then don't run this.
 
@@ -79,11 +79,13 @@ In the code above, `wget` is a command to download files from the internet and `
 
 We have a steep learning curve to traverse, so we are going to "flip" the classroom next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture.  Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
 
-Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". You should set up your computer to have one window with your terminal (or shell) and one with the software carpentry web page (click the link)
+Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". You should set up your computer to have one window with your terminal (or shell) and one with the software carpentry web page (click the link, and arrage the terminal and software carpentry windows side by side)
+
+![](images/split_screen.png)
 
 Note that we have already completed the Download Files, Install Software, and Open a New Shell sections. Proceed directly to [1. Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro.html)
 
-Read through the lesson. Everytime there's a code block (has a blue line across top), copy and paste the command in the code block into your terminal. It will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  Also, don't type the $
+Read through and complete the lessons. Everytime there's a code block (has a blue line across top), copy and paste the command in the code block into your terminal. It will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  Also, don't type the $
 
 ![](images/assignment_0_codeblock.png)
 
@@ -93,7 +95,7 @@ Refer to the helpful information below while you work through the Software Carpe
 
 ## Resources to Help You
 
-I highly recommend that you print out the [Linux Cheat Sheet](../resources/CheatSheetLinux_8-12-2016.pdf) which I created for myself and my students when I was learning `bash`. Print it out and use it as a mousepad.  It's unique because it translates english into `bash`.
+I highly recommend that you print out the [Linux Cheat Sheet](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/resources/README.md) which I created for myself and my students when I was learning `bash`. Print it out and use it as a mousepad.  It's unique because it translates english into `bash`.
 
 ChatGPT, Google Gemini, and Anthropic Claude are all useful AI large language models for assisting you in understanding the concepts in this assignment. They are really good at interpreting error messages for you.
 
