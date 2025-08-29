@@ -50,6 +50,19 @@ Your account will probably not be activated in time, so you should immediately c
 
 You will need to **download the data file for the lesson**.  Copy and paste the following code block into your terminal. _If you are having trouble copying and pasting in Ubuntu on windows, make sure that you are using the [Windows Terminal App](https://docs.microsoft.com/en-us/windows/terminal/install) to run Ubuntu.  You were asked to install the terminal app in the [Week 00 Lecture In Class Exercises](../lectures/lecture00.md). With Windows Terminal, copying and pasting should work as you're accustomed to.  For those with Macs, there should be no issues with copying and pasting._
 
+If you are using GitHub CodeSpaces, then run this.  If you are not, then don't run this.
+
+```bash
+# copy and paste the following commands into your terminal and run them by hitting the enter/return key
+wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
+unzip shell-lesson-data.zip
+mkdir ~/Desktop
+mv shell-lesson-data ~/Desktop
+cd ~
+```
+
+If you are using Windows Mac Ubunutu (not github codespaces), then run this
+
 ```bash
 # copy and paste the following commands into your terminal and run them by hitting the enter/return key
 wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
@@ -92,21 +105,19 @@ I made these notes, which are organized by the sections of the assignment, to he
 
 ### 1. [Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro/index.html)
 
-Nothing to note
+* If you are using GitHub CodeSpaces, after running `pwd` you should see `/home/vscode`
 
 ### 2. [Navigating Files and Directories](https://swcarpentry.github.io/shell-novice/02-filedir/index.html)
 
-> IMPORTANT!
-> For those using Github CodeSpaces for your terminal, after running the command `cd`, you will be taken to your home dir and it will be in a different location than Software Carpentry expects. Use `cd -` to get back to where you were.
-
+* those with Ubuntu running in windows won't have a `Desktop` dir unless you follow the data download instructions above. 
+* realize that you will have your own home directory with your username.  It won't be named `nelle`
+  
 * use `ctrl+l` keystroke to clear the terminal (those with macs, try `command+l`).  that's a lower case `L`
 * my favorite `ls` flags, aka options
   * `ls -ltrh` list all file details (`l`) with human readable file sizes (`h`) in reverse (`r`) chronological order (`t`)
   * `ls -lh`  list all file details (`l`) with human readable file sizes (`h`)
   * `ls -lhd */` list all file details (`l`) with human readable file sizes (`h`), but only directories (`d`) not files
   * I've never used the `-F` flag, frankly you don't need it
-* those with Ubuntu running in windows won't have a `Desktop` dir unless you follow the data download instructions above. 
-* realize that you will have your own home directory with your username.  It won't be named `nelle`
 
 ### 3. [Working With Files and Directories](https://swcarpentry.github.io/shell-novice/03-create/index.html)
 
