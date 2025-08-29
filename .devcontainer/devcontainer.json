@@ -1,22 +1,12 @@
 {
-  "name": "Comp Bio Assignment",
-  "build": { "dockerfile": "Dockerfile" },
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {}
-  },
+  "name": "Bash-only",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash"
   },
-  "postCreateCommand": "R -q -e 'install.packages(c(\"tidyverse\",\"readr\",\"here\",\"jsonlite\"), repos=\"https://cloud.r-project.org\")'",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "REditorSupport.r",
-        "ms-toolsai.jupyter",
-        "ms-python.python",
-        "GitHub.vscode-pull-request-github"
-      ]
-    }
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
   },
+  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y wget unzip tree && echo '✅ Ready: wget unzip tree installed'",
   "remoteUser": "vscode"
 }
