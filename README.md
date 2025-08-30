@@ -323,7 +323,7 @@ When you have completed the assigment you will `push` your changes to the primar
 ## FYI: Additional Details About CodeSpaces Virtual Machines (VMs)
 
 * You can only have 2 VMs at any one time.  It doesn't matter if they are running or stopped as far as I know.
-* If you need to spin up a third VM then you have to delete an existing virtual machine.  You can find your VM in your [CodeSpaces Page](https://github.com/codespaces) - scroll to the bottom.
+* If you need to spin up a third VM then you have to delete an existing virtual machine.  You can find your VM in your [CodeSpaces Page](https://github.com/codespaces) - scroll to the bottom. In the image below, I have 1 virtual machine name `symmetrical sniffle`
 
 ![](images/codespaces_vms.png)
 
