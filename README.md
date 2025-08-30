@@ -252,6 +252,13 @@ You will be editing your assignment repo in the CodeSpaces virtual machine.  The
 
 Let's provide a demonstration.
 
+0. Move to your assignment-0 repo dir
+
+```
+# replace YourGitHubUserName with your GitHub user name
+cd /wk00-assignment-0-YourGitHubUserName
+```
+
 1. Use the `ls` command in your CodeSpaces terminal to print the directories and files in your assignment repo to the screen.
 
 ```bash
