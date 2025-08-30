@@ -29,19 +29,19 @@ If you did not yet set up GitHub CodeSpaces (we did it in [Lecture 0](https://gi
 
 It will take a minute for the CodeSpaces virtual machine to load.  Once it's loaded, you should see this on your screen:
 
-![](images/codespaces.png)
+![](images/codespaces_vmwindow.png)
 
 In the codespaces window, the side panel shows the files and directories in the assignment repo.
 
-![]()
+![](images/codespaces_sidebar.png)
 
 The upper panel is a file viewer/editor and it should be showing you this `README.md` file that you are reading.
 
-![]()
+![](images/codespaces_viewer.png)
 
 The lower panel is an Ubuntu terminal.  I specifically set up your virtual machine to have Ubuntu because that's all you need for this assignment.
 
-![]()
+![](images/codespaces_terminal.png)
 
 If everything is making sense up to here, then you have successfully loaded the GitHub repo for Assignment 0 to your CodeSpaces virtual machine.  
 
@@ -151,7 +151,7 @@ When you have completed the assigment you will `push` your changes to the primar
 
 ---
 
-<details><summary>Download Data for Assignment (Do Not Follow The Download Instructions on Software Carpentry)</summary>
+<details><summary>Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)</summary>
 <p>
 
 ## Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)
@@ -190,10 +190,10 @@ cd ~
 
 ---
 
-<details><summary>Completing Assignment</summary>
+<details><summary>Assignment</summary>
 <p>
 
-## Completing Assignment
+## Assignment
 
 We have a steep learning curve to traverse, so we are going to "flip" the classroom next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture.  Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
 
@@ -214,32 +214,6 @@ Read through and complete the lessons. Everytime there's a code block (has a blu
 ![](images/assignment_0_codeblock.png)
 
 Refer to the helpful information below while you work through the Software Carpentry Lessons.
-
-</p>
-</details>
-
----
-
-<details><summary>Submitting Assignment</summary>
-<p>
-
-## Submitting Assignment
-When you complete the assignment, run the following lines of code in your CodeSpaces terminal to save everything to the repo.
-
-```bash
-# goto the VM home dir
-cd ~
-
-# move your work back to the repo and goto the repo dir
-# replace YourGitHubUserNameUserName with your GitHub user name.
-mv Desktop /workspaces/wk00-assignment-0-YourGitHubUserNameUserName  
-cd /workspaces/wk00-assignment-0-YourGitHubUserNameUserName 
-
-# add, commit, and push to github
-git add --all
-git commit -m "submitting assignment"
-git push
-```
 
 </p>
 </details>
