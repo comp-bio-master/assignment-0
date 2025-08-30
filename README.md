@@ -48,10 +48,187 @@ If everything is making sense up to here, then you have successfully loaded the 
  </p>
 </details>
 
+
+
+---
+
+<details><summary>Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)</summary>
+<p>
+
+## Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)
+
+I have already **downloaded the data file for the lesson** (`shell-lesson-data.zip`) to the assignment repo.  Copy and paste the following commands into your terminal and run them by hitting the <ENTER/RETURN> key.
+
+1. Decompress the directories and files for the assignment
+
+```bash
+unzip shell-lesson-data.zip
+```
+
+2. Make a new directory called `Desktop` in the home directory of your VM
+
+```
+mkdir ~/Desktop
+```
+
+3. Move the unzipped dir to the Desktop dir in the home dir (needed for instructions in Software Carpentry to work)
+
+```
+mv shell-lesson-data ~/Desktop
+```
+
+4. Goto the home dir in your VM
+
+```
+cd ~
+```
+
+> [NOTE!]
+> Unless you specifically set up keystrokes in CodeSpaces, you will have to use the mouse to copy and paste.
+
+</p>
+</details>
+
+---
+
+<details><summary>Assignment</summary>
+<p>
+
+## Assignment
+
+We have a steep learning curve to traverse, so we are going to "flip" the classroom next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture.  Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
+
+Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". 
+
+> [NOTE!]
+> You should set up your computer to have one window with your CodeSpaces terminal (or shell) and one with the software carpentry web page side by side)
+
+![](images/split_screen.png)
+
+Note that we have already completed the Download Files, Install Software, and Open a New Shell sections. Proceed directly to [1. Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro.html)
+
+Read through and complete the lessons. Everytime there's a code block (has a blue line across top), run the command in the code block into your terminal. The tutorial will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  
+
+> [NOTE!]
+> Don't type the $ in the code blocks.  That's the command prompt.
+
+![](images/assignment_0_codeblock.png)
+
+Refer to the helpful information below while you work through the Software Carpentry Lessons.
+
+</p>
+</details>
+
+---
+
+<details><summary>Resources to Help You Complete the Assignment</summary>
+<p>
+
+## Resources to Help You Complete the Assignment
+
+I highly recommend that you print out the [Linux Cheat Sheet](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/resources/README.md) which I created for myself and my students when I was learning `bash`. Print it out and use it as a mousepad.  It's unique because it translates english into `bash`.
+
+ChatGPT, Google Gemini, and Anthropic Claude are all useful AI large language models for assisting you in understanding the concepts in this assignment. They are really good at interpreting error messages for you.
+
+</p>
+</details>
+
+---
+
+<details><summary>Tips and Additions to The Unix Shell Lesson</summary>
+<p>
+
+## Tips and Additions to The Unix Shell Lesson
+
+I made these notes, which are organized by the sections of the assignment, to help you navigate sticking points in the assignment and supplement the information provided by Software Carpentry.  
+
+### 0. Picking Up From Where You Left Off.
+
+If you stop in the middle of the assignment an need to get back to where you were, you need to navigate back there using the `cd` command.
+
+Unfortunately, the CodeSpaces VM does not remember which directory you were in last if you stop and start it again.  
+
+If you followed the instructions, then the `shell-lesson-data` dir is here: `~/Desktop/shell-lesson-data`, so the following command will get you there:
+
+```bash
+cd ~/Desktop/shell-lesson-data
+```
+
+### 1. [Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro/index.html)
+
+* If you are using GitHub CodeSpaces, after running `pwd` you should see `/home/vscode`
+
+### 2. [Navigating Files and Directories](https://swcarpentry.github.io/shell-novice/02-filedir/index.html)
+
+* those with Ubuntu running in windows won't have a `Desktop` dir unless you follow the data download instructions above. 
+* realize that you will have your own home directory with your username.  It won't be named `nelle`
+  
+* use `ctrl+l` keystroke to clear the terminal (those with macs, try `command+l`).  that's a lower case `L`
+* my favorite `ls` flags, aka options
+  * `ls -ltrh` list all file details (`l`) with human readable file sizes (`h`) in reverse (`r`) chronological order (`t`)
+  * `ls -lh`  list all file details (`l`) with human readable file sizes (`h`)
+  * `ls -lhd */` list all file details (`l`) with human readable file sizes (`h`), but only directories (`d`) not files
+  * I've never used the `-F` flag, frankly you don't need it
+
+### 3. [Working With Files and Directories](https://swcarpentry.github.io/shell-novice/03-create/index.html)
+
+* realize that the orange boxes don't always pertain to the directory structure in your lesson data.  For example, the 2nd one (Moving Files to a new folder) does not refer to our directory structure, but rather a hypothetical directory structure on Jamie's computer.  Who's Jamie?  idk
+
+</p>
+</details>
+
+---
+
+<details><summary>Self Check on Assignment</summary>
+<p>
+
+## Self Check on Assignment
+
+If you did everything correctly, then the directory structure of your `shell-lesson-data` directory should look like that below.
+
+You can check your work by visualizing your assignment directory tree with the following command and argument:
+
+```bash
+tree ~/Desktop/shell-lesson-data
+```
+
+![](images/assignment_0_answer.png)
+
+</p>
+</details>
+
+---
+
+<details><summary>Submitting Assignment</summary>
+<p>
+
+## Submitting Assignment
+
+When you complete the assignment, run the following lines of code in your CodeSpaces terminal to save everything to the repo.
+
+```bash
+# goto the VM home dir
+cd ~
+
+# move your work back to the repo and goto the repo dir
+# replace YourGitHubUserNameUserName with your GitHub user name.
+mv Desktop /workspaces/wk00-assignment-0-YourGitHubUserNameUserName  
+cd /workspaces/wk00-assignment-0-YourGitHubUserNameUserName 
+
+# add, commit, and push to github
+git add --all
+git commit -m "submitting assignment"
+git push
+```
+
+</p>
+</details>
+
 ---
 
 <details><summary>Your Assignment-0 GitHub Repositories & CodeSpaces</summary>
 <p>
+
 
 ## Your Assignment-0 GitHub Repositories & CodeSpaces
 
@@ -148,164 +325,3 @@ When you have completed the assigment you will `push` your changes to the primar
 
 </p>
 </details>
-
----
-
-<details><summary>Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)</summary>
-<p>
-
-## Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)
-
-I have already **downloaded the data file for the lesson** (`shell-lesson-data.zip`) to the assignment repo.  Copy and paste the following commands into your terminal and run them by hitting the <ENTER/RETURN> key.
-
-1. Decompress the directories and files for the assignment
-
-```bash
-unzip shell-lesson-data.zip
-```
-
-2. Make a new directory called `Desktop` in the home directory of your VM
-
-```
-mkdir ~/Desktop
-```
-
-3. Move the unzipped dir to the Desktop dir in the home dir (needed for instructions in Software Carpentry to work)
-
-```
-mv shell-lesson-data ~/Desktop
-```
-
-4. Goto the home dir in your VM
-
-```
-cd ~
-```
-
-> [NOTE!]
-> Unless you specifically set up keystrokes in CodeSpaces, you will have to use the mouse to copy and paste.
-
-</p>
-</details>
-
----
-
-<details><summary>Assignment</summary>
-<p>
-
-## Assignment
-
-We have a steep learning curve to traverse, so we are going to "flip" the classroom next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture.  Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
-
-Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". 
-
-> [NOTE!]
-> You should set up your computer to have one window with your CodeSpaces terminal (or shell) and one with the software carpentry web page side by side)
-
-![](images/split_screen.png)
-
-Note that we have already completed the Download Files, Install Software, and Open a New Shell sections. Proceed directly to [1. Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro.html)
-
-Read through and complete the lessons. Everytime there's a code block (has a blue line across top), run the command in the code block into your terminal. The tutorial will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  
-
-> [NOTE!]
-> Don't type the $ in the code blocks.  That's the command prompt.
-
-![](images/assignment_0_codeblock.png)
-
-Refer to the helpful information below while you work through the Software Carpentry Lessons.
-
-</p>
-</details>
-
----
-
-<details><summary>Resources to Help You Complete the Assignment</summary>
-<p>
-
-## Resources to Help You Complete the Assignment
-
-I highly recommend that you print out the [Linux Cheat Sheet](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/resources/README.md) which I created for myself and my students when I was learning `bash`. Print it out and use it as a mousepad.  It's unique because it translates english into `bash`.
-
-ChatGPT, Google Gemini, and Anthropic Claude are all useful AI large language models for assisting you in understanding the concepts in this assignment. They are really good at interpreting error messages for you.
-
-</p>
-</details>
-
----
-
-<details><summary>Tips and Additions to The Unix Shell Lesson</summary>
-<p>
-
-## Tips and Additions to The Unix Shell Lesson
-
-I made these notes, which are organized by the sections of the assignment, to help you navigate sticking points in the assignment and supplement the information provided by Software Carpentry.  
-
-### 1. [Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro/index.html)
-
-* If you are using GitHub CodeSpaces, after running `pwd` you should see `/home/vscode`
-
-### 2. [Navigating Files and Directories](https://swcarpentry.github.io/shell-novice/02-filedir/index.html)
-
-* those with Ubuntu running in windows won't have a `Desktop` dir unless you follow the data download instructions above. 
-* realize that you will have your own home directory with your username.  It won't be named `nelle`
-  
-* use `ctrl+l` keystroke to clear the terminal (those with macs, try `command+l`).  that's a lower case `L`
-* my favorite `ls` flags, aka options
-  * `ls -ltrh` list all file details (`l`) with human readable file sizes (`h`) in reverse (`r`) chronological order (`t`)
-  * `ls -lh`  list all file details (`l`) with human readable file sizes (`h`)
-  * `ls -lhd */` list all file details (`l`) with human readable file sizes (`h`), but only directories (`d`) not files
-  * I've never used the `-F` flag, frankly you don't need it
-
-### 3. [Working With Files and Directories](https://swcarpentry.github.io/shell-novice/03-create/index.html)
-
-* realize that the orange boxes don't always pertain to the directory structure in your lesson data.  For example, the 2nd one (Moving Files to a new folder) does not refer to our directory structure, but rather a hypothetical directory structure on Jamie's computer.  Who's Jamie?  idk
-
-</p>
-</details>
-
----
-
-<details><summary>Self Check on Assignment</summary>
-<p>
-
-## Self Check on Assignment
-
-If you did everything correctly, then the directory structure of your `shell-lesson-data` directory should look like that below.
-
-You can check your work by visualizing your assignment directory tree with the following command and argument:
-
-```bash
-tree ~/Desktop/shell-lesson-data
-```
-
-![](images/assignment_0_answer.png)
-
-</p>
-</details>
-
----
-
-<details><summary>Submitting Assignment</summary>
-<p>
-
-## Submitting Assignment
-
-When you complete the assignment, run the following lines of code in your CodeSpaces terminal to save everything to the repo.
-
-```bash
-# goto the VM home dir
-cd ~
-
-# move your work back to the repo and goto the repo dir
-# replace YourGitHubUserNameUserName with your GitHub user name.
-mv Desktop /workspaces/wk00-assignment-0-YourGitHubUserNameUserName  
-cd /workspaces/wk00-assignment-0-YourGitHubUserNameUserName 
-
-# add, commit, and push to github
-git add --all
-git commit -m "submitting assignment"
-git push
-```
-
-
