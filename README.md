@@ -6,102 +6,264 @@
 
 ---
 
+<details><summary>Computer Preparation</summary>
+<p>
+
 ## Computer Preparation
 
-You should have already prepared your computer during Lecture 0.  If you did then you can skip over this section to "Open Your Terminal".  
+Use GitHub CodeSpaces to complete this assignment.  
 
-<details><summary>Windows, Mac, Linux</summary>
-<p>
-
-Complete the tasks listed in the [How to Set Up Your Computer for Computational Biology](https://github.com/tamucc-comp-bio/how_to/blob/main/howto_setup_computer.md), up to, but not including R and RStudio.
-
-If you are having difficulty, use Launch if your account is activated.
-
-If the above are not working, then try [installing GitBash](https://carpentries.github.io/workshop-template/install_instructions/#shell).
-    
-</p>
-</details>
-
-<details><summary>ChromeOS, iOS, Android</summary>
-<p>
- 
-Complete the tasks listed in the [Accessing Launch Instructions](https://hprc.tamu.edu/kb/User-Guides/Launch/Access/#no-ssh-login).
-
-Your account will probably not be activated in time, so you should immediately contact Dr. Bird to request the use of one of his Linux servers.
+If you did not yet set up GitHub CodeSpaces (we did it in [Lecture 0](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/lectures/lecture00.md)) then do that now: [Instructions](https://github.com/tamucc-comp-bio/how_to/blob/main/howto_github_codespaces.md)
 
  </p>
 </details>
 
 ---
 
-## Open Your Terminal
+<details><summary>Click on the GitHub CodeSpaces Button to Load Your Virtual Machine for Assignment 0</summary>
+<p>
 
-![terminal](images/terminal.png)
+## Click on the GitHub CodeSpaces Button to Load Your Virtual Machine for Assignment 0
 
-* If you don't have a terminal on your computer (ChromeOS, iOS, Android, or Ubuntu install failed on Windows), then try the [Launch HPC](https://portal-launch.hprc.tamu.edu/).  Realize that your Launch HPC account, which you signed up for during Lecture 00, has to be manually approved and it may take a few days before it works. Once you can log in, select the shell access icon.
+![terminal](images/codespaces_button.png)
 
-   ![](images/launch_shell_access.png)
+It will take a minute for the CodeSpaces virtual machine to load.  Once it's loaded, you should see this on your screen:
 
-* If all else fails, contact Dr. Bird to use a computer in his lab.
+![](images/codespaces.png)
+
+In the codespaces window, the side panel shows the files and directories in the assignment repo.
+
+![]()
+
+The upper panel is a file viewer/editor and it should be showing you this `README.md` file that you are reading.
+
+![]()
+
+The lower panel is an Ubuntu terminal.  I specifically set up your virtual machine to have Ubuntu because that's all you need for this assignment.
+
+![]()
+
+If everything is making sense up to here, then you have successfully loaded the GitHub repo for Assignment 0 to your CodeSpaces virtual machine.  
+
+ </p>
+</details>
 
 ---
 
-## Download Data for Assignment (Do Not Follow The Download Instructions on Software Carpentry)
+<details><summary>Your Assignment-0 GitHub Repositories & CodeSpaces</summary>
+<p>
 
-You will need to **download the data file for the lesson**.  Copy and paste the following code block into your terminal. _If you are having trouble copying and pasting in Ubuntu on windows, make sure that you are using the [Windows Terminal App](https://docs.microsoft.com/en-us/windows/terminal/install) to run Ubuntu.  You were asked to install the terminal app in the [Week 00 Lecture In Class Exercises](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/lectures/lecture00.md). With Windows Terminal, copying and pasting should work as you're accustomed to.  For those with Macs, there should be no issues with copying and pasting._
+## Your Assignment-0 GitHub Repositories & CodeSpaces
 
-If you are using GitHub CodeSpaces, then run this.  If you are not, then don't run this.
+Each student has their own assignment repository. It is private so that only you and Dr. Bird can see it.  Your personal assignment repo has been `cloned` into your Codespaces virtual machine and you are presumably reading this document (`README.md`) from that clone.
+
+There is now one copy of your assignment in the primary GitHub repo which was created when you accepted this assignment, and there is another copy of your repo here in the CodeSpaces virtual machine.  
+
+The location of your primary assignment repo is in this location: github.com/comp-bio-master/wk00-assignment-0-YourGitHubUserName.  Replace "YourGitHubUserName" with your GitHub username and you have the URL to that repository. You can bookmark that link for convenience, **BUT DO NOT EDIT THE PRIMARY COPY OF THE REPO**.
+
+ </p>
+</details>
+
+---
+
+<details><summary>Tracking Your Changes to Your Assignment Repository</summary>
+<p>
+
+## Tracking Your Changes to Your Assignment Repository
+
+You will be editing your assignment repo in the CodeSpaces virtual machine.  The changes you make to your assignment repository here in the virtual machine are not immediatly applied to the primary copy. You have to explicitly use `git` to track the changes you've made, and then send them to the primary copy of the rep. 
+
+Let's provide a demonstration.
+
+1. Use the `ls` command in your CodeSpaces terminal to print the directories and files in your assignment repo to the screen.
 
 ```bash
-# copy and paste the following commands into your terminal and run them by hitting the enter/return key
-wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
+ls
+```
+
+2. Run this line of code in your CodeSpaces terminal to create a file named `my_first_file.txt`:
+
+```bash
+touch my_first_file.txt
+```
+
+3. Run `ls` again and you should now see `my_first_file.txt`
+
+```bash
+ls
+```
+
+4. If you take a look at your primary repo (github.com/comp-bio-master/wk00-assignment-0-YourGitHubUserName) and refresh the page, you will not see `my_first_file.txt`
+
+5. We can track your changes in the copy of your assignment repo in your CodeSpaces virtual machine using `git add` and `git commit` and then send them to the primary copy of the repo using `git push`:
+
+```bash
+git add --all
+git commit -m "completed first task")
+git push  
+```
+
+6. If you take a look at your primary repo (github.com/comp-bio-master/wk00-assignment-0-YourGitHubUserName) and refresh the page, you will see `my_first_file.txt`
+
+Congratulations!  You're now tracking the changes to your assignment repo in the CodeSpaces virtual machine.
+
+ </p>
+</details>
+
+> [CAUTION!] 
+> If you are confused after completing this section, then contact Dr. Bird.
+
+---
+
+<details><summary>CodeSpaces Dos and Don'ts</summary>
+<p>
+
+## CodeSpaces Dos and Don'ts
+
+1. *Do* use `git add`, `git commit`, and `git push` to track you changes and back them up to the primary copy of the repository.
+
+2. *Do* stop the virtual machine when you are not working on this assignment. [Instructions](https://github.com/tamucc-comp-bio/how_to/blob/main/howto_github_codespaces.md#-3-stopping-your-codespace)
+
+3. *DO NOT* delete this virtual machine until you have pushed the changes you made in the virtual machine to the repo. Stopping the machine will not cause any problems. Deleting it will cause you to lose your work.
+
+When you have completed the assigment you will `push` your changes to the primary copy of the repo.
+
+ </p>
+</details>
+
+---
+
+<details><summary>FYI: Additional Details About CodeSpaces Virtual Machines (VMs)</summary>
+<p>
+
+## FYI: Additional Details About CodeSpaces Virtual Machines (VMs)
+
+* You can only have 2 VMs at any one time.  It doesn't matter if they are running or stopped as far as I know.
+* If you need to spin up a third VM then you have to delete an existing virtual machine.  You can find your VM in your [CodeSpaces Page](https://github.com/codespaces) - scroll to the bottom.
+
+![](images/codespaces_vms.png)
+
+* If you dilligently `push` your changes to the primary github repo, then deleting a VM should not be a big deal beaause all of the important files are in the primary repo.
+* There is a limitation on the number of hours you can run CodeSpaces VMs per month (30-45), so be sure to stop them when you are not using them.  [Instructions](https://github.com/tamucc-comp-bio/how_to/blob/main/howto_github_codespaces.md#-3-stopping-your-codespace)
+
+</p>
+</details>
+
+---
+
+<details><summary>Download Data for Assignment (Do Not Follow The Download Instructions on Software Carpentry)</summary>
+<p>
+
+## Setup the Data for This Assignment (Do Not Follow The Download Instructions on Software Carpentry)
+
+I have already **downloaded the data file for the lesson** (`shell-lesson-data.zip`) to the assignment repo.  Copy and paste the following commands into your terminal and run them by hitting the <ENTER/RETURN> key.
+
+1. Decompress the directories and files for the assignment
+
+```bash
 unzip shell-lesson-data.zip
+```
+
+2. Make a new directory called `Desktop` in the home directory of your VM
+
+```
 mkdir ~/Desktop
+```
+
+3. Move the unzipped dir to the Desktop dir in the home dir (needed for instructions in Software Carpentry to work)
+
+```
 mv shell-lesson-data ~/Desktop
+```
+
+4. Goto the home dir in your VM
+
+```
 cd ~
 ```
 
-If you are using Windows Mac Ubunutu (not github codespaces), then run this
+> [NOTE!]
+> Unless you specifically set up keystrokes in CodeSpaces, you will have to use the mouse to copy and paste.
 
-```bash
-# copy and paste the following commands into your terminal and run them by hitting the enter/return key
-wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
-unzip shell-lesson-data.zip
-mkdir Desktop
-mv shell-lesson-data Desktop
-```
-
-In the code above, `wget` is a command to download files from the internet and `https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip` is the web address of the data file.  Notice that it is zipped.  You can use the `unzip` command to unzip it.  Once you have executed the commands above, the data will be in the directory named `shell-lesson-data`. The third line of code will create a new directory (folder) named `Desktop`. Those with macs might see an error after `mkdir Desktop`.  That's ok, it just means that the desktop dir was already there. Those with Ubuntu on windows, the `Desktop` dir will be created.  Then `mv` will move the `shell-lesson-data` dir inside of the `Desktop` dir.
+</p>
+</details>
 
 ---
 
-## Assignment
+<details><summary>Completing Assignment</summary>
+<p>
+
+## Completing Assignment
 
 We have a steep learning curve to traverse, so we are going to "flip" the classroom next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture.  Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
 
-Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". You should set up your computer to have one window with your terminal (or shell) and one with the software carpentry web page (click the link, and arrage the terminal and software carpentry windows side by side)
+Your assignment is to work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) from "Introducing the Shell" through "Working with Files and Directories". 
+
+> [NOTE!]
+> You should set up your computer to have one window with your CodeSpaces terminal (or shell) and one with the software carpentry web page side by side)
 
 ![](images/split_screen.png)
 
 Note that we have already completed the Download Files, Install Software, and Open a New Shell sections. Proceed directly to [1. Introducing the Shell](https://swcarpentry.github.io/shell-novice/01-intro.html)
 
-Read through and complete the lessons. Everytime there's a code block (has a blue line across top), copy and paste the command in the code block into your terminal. It will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  Also, don't type the $
+Read through and complete the lessons. Everytime there's a code block (has a blue line across top), run the command in the code block into your terminal. The tutorial will also show you the expected output in the block with the black line across the top (don't type this in, only the commands under the blue lines).  
+
+> [NOTE!]
+> Don't type the $ in the code blocks.  That's the command prompt.
 
 ![](images/assignment_0_codeblock.png)
 
 Refer to the helpful information below while you work through the Software Carpentry Lessons.
 
+</p>
+</details>
+
 ---
 
-## Resources to Help You
+<details><summary>Submitting Assignment</summary>
+<p>
+
+## Submitting Assignment
+When you complete the assignment, run the following lines of code in your CodeSpaces terminal to save everything to the repo.
+
+```bash
+# goto the VM home dir
+cd ~
+
+# move your work back to the repo and goto the repo dir
+# replace YourGitHubUserNameUserName with your GitHub user name.
+mv Desktop /workspaces/wk00-assignment-0-YourGitHubUserNameUserName  
+cd /workspaces/wk00-assignment-0-YourGitHubUserNameUserName 
+
+# add, commit, and push to github
+git add --all
+git commit -m "submitting assignment"
+git push
+```
+
+</p>
+</details>
+
+---
+
+<details><summary>Resources to Help You Complete the Assignment</summary>
+<p>
+
+## Resources to Help You Complete the Assignment
 
 I highly recommend that you print out the [Linux Cheat Sheet](https://github.com/tamucc-comp-bio/classroom_repo_2025/blob/main/resources/README.md) which I created for myself and my students when I was learning `bash`. Print it out and use it as a mousepad.  It's unique because it translates english into `bash`.
 
 ChatGPT, Google Gemini, and Anthropic Claude are all useful AI large language models for assisting you in understanding the concepts in this assignment. They are really good at interpreting error messages for you.
 
+</p>
+</details>
+
 ---
 
-## Hints and Additions to The Unix Shell Lesson
+<details><summary>Tips and Additions to The Unix Shell Lesson</summary>
+<p>
+
+## Tips and Additions to The Unix Shell Lesson
 
 I made these notes, which are organized by the sections of the assignment, to help you navigate sticking points in the assignment and supplement the information provided by Software Carpentry.  
 
@@ -125,43 +287,51 @@ I made these notes, which are organized by the sections of the assignment, to he
 
 * realize that the orange boxes don't always pertain to the directory structure in your lesson data.  For example, the 2nd one (Moving Files to a new folder) does not refer to our directory structure, but rather a hypothetical directory structure on Jamie's computer.  Who's Jamie?  idk
 
+</p>
+</details>
+
 ---
+
+<details><summary>Self Check on Assignment</summary>
+<p>
 
 ## Self Check on Assignment
 
 If you did everything correctly, then the directory structure of your `shell-lesson-data` directory should look like that below.
 
-You probably need to install `tree` as follows:
+You can check your work by visualizing your assignment directory tree with the following command and argument:
 
 ```bash
-#mac
-brew update
-brew upgrade
-brew install tree
-```
-
-```bash
-#ubuntu
-sudo apt update
-sudo apt upgrade
-sudo apt install tree
-```
-
-Then you can create your assignment directory tree with the following command and argument:
-
-```bash
-cd ~
 tree ~/Desktop/shell-lesson-data
 ```
 
 ![](images/assignment_0_answer.png)
 
+</p>
+</details>
+
 ---
 
-## [Submit Assignment](https://forms.office.com/r/s93wiun80L) 
+<details><summary>Submitting Assignment</summary>
+<p>
 
-[Upload](https://forms.office.com/r/s93wiun80L) a screenshot of your  `shell-lesson-data` directory, like the example above.
+## Submitting Assignment
 
+When you complete the assignment, run the following lines of code in your CodeSpaces terminal to save everything to the repo.
 
+```bash
+# goto the VM home dir
+cd ~
+
+# move your work back to the repo and goto the repo dir
+# replace YourGitHubUserNameUserName with your GitHub user name.
+mv Desktop /workspaces/wk00-assignment-0-YourGitHubUserNameUserName  
+cd /workspaces/wk00-assignment-0-YourGitHubUserNameUserName 
+
+# add, commit, and push to github
+git add --all
+git commit -m "submitting assignment"
+git push
+```
 
 
