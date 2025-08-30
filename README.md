@@ -1,4 +1,4 @@
-# Assignment 0 
+# Assignment 0: Intro to CLI Computing
 
 ## Reading for Discussion Next lecture
 
