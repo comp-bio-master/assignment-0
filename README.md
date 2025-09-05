@@ -1,8 +1,6 @@
 # Assignment 0: Intro to CLI Computing
 
-## Reading for Discussion Next lecture
-
-[Wickham 2014 Tidy Data.pdf](https://github.com/tamucc-comp-bio/classroom_repo_2025/tree/main/literature)
+Read this through and work through [Software Carpentry's The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson from "Introducing the Shell" through "Working with Files and Directories".
 
 ---
 
