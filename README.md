@@ -8,7 +8,7 @@ Read this through and work through [Software Carpentry's The Unix Shell](https:/
 
 In a nutshell:
 
-1. Click the Link to Create Your Personalized Assignment Repo
+1. Click the assignment invite link to create your personalized assignment repo
 2. Click the CodeSpaces Link in the Repo
 3. Unzip the `shell-lesson-data`, create the `Desktop` dir in you home dir (`~`), move the `shell-lesson-data` dir to `~/Desktop`, change your directory to the `shell-lesson-data` dir
 4. Open the Software Carpentry lesson, split screen between Software Carpentry and Codespaces 
