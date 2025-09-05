@@ -4,6 +4,22 @@ Read this through and work through [Software Carpentry's The Unix Shell](https:/
 
 ---
 
+## Overview
+
+In a nutshell:
+
+1. Click the Link to Create Your Personalized Assignment Repo
+2. Click the CodeSpaces Link in the Repo
+3. Unzip the `shell-lesson-data`, create the `Desktop` dir in you home dir (`~`), move the `shell-lesson-data` dir to `~/Desktop`, change your directory to the `shell-lesson-data` dir
+4. Open the Software Carpentry lesson, split screen between Software Carpentry and Codespaces 
+5. Start at "1. Introducing the Shell" and stop after completing "3. Working with files and directories"
+6. Move your `shell-lesson-data` dir back to the repo
+7. Use `git` to `add`, `commit`, and `push` the changes to the repo back to the primary copy on github.
+
+I suggested you carefully read through the information below and follow the instructions to complete these tasks while also gaining an understanding of how everything involved in the assignment works.
+
+---
+
 <details><summary>Computer Preparation</summary>
 <p>
 
